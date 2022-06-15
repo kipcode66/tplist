@@ -17,6 +17,6 @@ python3 ./tplist.py ./assets/us.txt <path_to_your_map>/map/Final/Release output.
 
 (Of course, replace `<path_to_your_map>` with the path to where you saved the extracted files.)
 
-The provided `assets/xx.lst` files are example of a list of modules to extract. You can provide your own file which contains a list of the modules you want to extract the symbols from. (The provided lists will extract all symbols from every modules)
+The provided `assets/xx.lst` files are example of a list of modules to extract. You can provide your own file which contains a list of the modules you want to extract the symbols from. (The provided lists will extract all symbols from all modules)
 
-You can run `python3 ./tplist.py --help` for further help with the vailable options.
+You can run `python3 ./tplist.py --help` for further help with the viable options.
