@@ -62,8 +62,10 @@ class MapParser():
     EXCLUDED_ENTRIES = ["_prolog", "_epilog", "_unresolved",
                         "_ctors", "_dtors", "__destroy_global_chain_reference", "ModuleProlog", "ModuleEpilog"]
     SECTION_PATTERN = re.compile("^(\.[a-z0-9]+) section layout$")
+    # LINE_PATTERN = re.compile(
+    #     "^\s+([a-fA-F0-9]{8})\s+([a-fA-F0-9]{6})\s+([a-fA-F0-9]{8})\s+[0-9]+\s+([^\s\$\.\*\@]+)\s+.+$")
     LINE_PATTERN = re.compile(
-        "^\s+([a-fA-F0-9]{8})\s+([a-fA-F0-9]{6})\s+([a-fA-F0-9]{8})\s+[0-9]+\s+([^\s\$\.\*\@]+)\s+.+$")
+        "^\s+([a-fA-F0-9]{8})\s+([a-fA-F0-9]{6})\s+([a-fA-F0-9]{8})\s+[0-9]+\s+(.+?)\s+([^\.\s]+\.[^\s]\s*){0,2}$");
 
     def parse(self, reader: BufferedReader):
         lst = {}
